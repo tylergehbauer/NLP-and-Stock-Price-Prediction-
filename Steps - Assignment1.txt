@@ -1,0 +1,28 @@
+
+# NLP-and-Stock-Price-Prediction-
+
+1. Data Extraction
+
+        Movie review
+	disney, universal, netflix, sony and Warner Bros
+            
+        Stock Price Data
+        
+        Market Wide Stock
+        
+        # Alpaca API (GP)
+
+2. Data Profiling (GP)
+    
+       NER
+
+3. Polarity (Tyler)
+
+4. Stock-Price-Prediction (Nelson /Tyler)
+
+5. Polarity vs Stock-Price-Prediction (All/Tyler)
+
+6. New Library (Doc2Vec) / (Vec2Doc) / (GloVe)
+
+7. Presentation (Nitty)
+
