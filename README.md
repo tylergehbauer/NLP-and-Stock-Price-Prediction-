@@ -5,6 +5,7 @@
 
 ## Using machine learning and NLP to predict trends in stock prices
 ![Sentiments](imgs/img0.jpg)
+![Sentiments](imgs/img6-nlp.jpg)
 
 ## Technical Requirements
 
@@ -37,6 +38,8 @@ https://github.com/tylergehbauer/NLP-and-Stock-Price-Prediction-.git
 
 * Jupyter notebook, Notepade, Notepad ++, Visual Studio Code
 
+![Real Python](imgs/img7-real.jpg)
+
 ### One or more Python modules, machine learning models utilized in this project
 
 ![Data Collection](imgs/img4.jpg)
@@ -45,12 +48,15 @@ https://github.com/tylergehbauer/NLP-and-Stock-Price-Prediction-.git
 * [Evidence Folder](Evidence_Folder/readme.md)
 
 ### One new technology or library used that the class hasn't covered. 
-* Granger Casualty Test: Combines two data frames for better visualization
+* Granger Casuality Test: Combines two data frames for better visualization
 * Granger
-* Text2Blob
+
+![granger causality](imgs/img9-nlp.jpg)
 * Flair
 * CIRCLIFY
+* Text2Blob
 
+![granger causality](imgs/img8-gran.jpg)
 
 ### Presentation 
 
