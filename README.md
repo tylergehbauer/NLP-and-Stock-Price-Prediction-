@@ -26,13 +26,16 @@ https://github.com/tylergehbauer/NLP-and-Stock-Price-Prediction-.git
 ### Data Collection and Preparation 
 
 * Data collected, cleaned, and prepared for the application or analysis.
+
  https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset?select=rotten_tomatoes_movies.csv
+ 
 ![Rotten Tomatoes](imgs/img6.jpg) 
 
  * https://app.alpaca.markets/brokerage/dashboard/overview
-![Alpaca](imgs/img5.jpg)
 
-![Data Collection](imgs/img2.jpg)
+ ![Alpaca](imgs/img5.jpg)
+
+ ![Data Collection](imgs/img2.jpg)
 
 ### Development  
 
