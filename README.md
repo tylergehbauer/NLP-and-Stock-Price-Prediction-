@@ -4,7 +4,7 @@
 # Project Title: NLP-and-Stock-Price-Prediction
 
 ## Using machine learning and NLP to predict trends in stock prices
-![Sentiments](imgs/img0.jpg)
+![Sentiments](imgs/img0.jpg)\
 ![Sentiments](imgs/img6-nlp.jpg)
 
 ## Technical Requirements
