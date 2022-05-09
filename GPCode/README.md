@@ -1,4 +1,4 @@
-![img0.jpg](../_resources/img0.jpg)
+![img0.jpg](.imgs/img0.jpg)
 
 While the relationship between the sentiment of traders, and sentiment of the digital Twitter population, has been tested to have a relationship to the financial performance of industries, either through share price or financial performance, there has been limited studies of impact of sentiment of Critics review on the stock price of the publishing company.
 
