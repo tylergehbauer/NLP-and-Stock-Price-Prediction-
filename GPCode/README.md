@@ -8,7 +8,7 @@ The purpose of this study is to create a model that is predictive in nature of a
 
 We have used Pandas heavily in data profiling, pre-processing and plotting.
 
-![img7-real.jpg](../imgs/img7-real.jpg)
+![img7-real.jpg](./imgs/img7-real.jpg)
 
 ### Source of Data:
 
@@ -23,7 +23,7 @@ Publishing Company Stock Data: ALPACA API ( alpaca\_api.get\_bars )
 
 Python Modules Installed:
 
-![img4.jpg](../imgs/img4.jpg)
+![img4.jpg](./imgs/img4.jpg)
 
 Other Modules Used:
 
@@ -35,37 +35,37 @@ Other Modules Used:
 
 ### Data Profiling:
 
-![MDP.PNG](../imgs/MDP.PNG)
+![MDP.PNG](./imgs/MDP.PNG)
 
 **Stock Price Profiling:**
 
-![SPDP.PNG](../imgs/SPDP.PNG)
+![SPDP.PNG](./imgs/SPDP.PNG)
 
-![img6-nlp.jpg](../imgs/img6-nlp.jpg)
+![img6-nlp.jpg](./imgs/img6-nlp.jpg)
 
 NLP Pipeline profiling:
 
-![NLP.PNG](../imgs/NLP.PNG)
+![NLP.PNG](./imgs/NLP.PNG)
 
-![img9-nlp.jpg](../imgs/img9-nlp.jpg)
+![img9-nlp.jpg](./imgs/img9-nlp.jpg)
 
 NLP Score Comparison and Outcome:
 
-![NLPScore.PNG](../imgs/NLPScore.PNG)
+![NLPScore.PNG](./imgs/NLPScore.PNG)
 
-![NLPOutcome.PNG](../imgs/NLPOutcome.PNG)
+![NLPOutcome.PNG](./imgs/NLPOutcome.PNG)
 
 **The Final Test:**
 
 We join the movie comment and stock data using Pandas join on streaming\_release\_date (NFLX) and data of Stock price after normalizing the data using MinMaxScaler and plot the final data frame,
 
-![Join.PNG](../imgsJoin.PNG)
+![Join.PNG](./imgsJoin.PNG)
 
 The graph does show some promise on probable correlation.
 
 **Granger Causality Test:**
 
-![GC.PNG](../imgs/GC.PNG)
+![GC.PNG](./imgs/GC.PNG)
 
 ### **Conclusion:**
 
