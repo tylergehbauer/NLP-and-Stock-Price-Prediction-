@@ -33,6 +33,18 @@ Other Modules Used:
 - Flair (pip install flair) May require Pytorch to be installed.
 - Gensim (pip install gensim)
 
+### Directory Structure
+
+Code: Final Jupyter Notebooks. The code has been done for two publishing companies, Netflix and Disney. In the Kaggle data set, any row containing the publishing company name has been included.
+
+data: Data Files used for Movie Critic comments.
+
+Presentation: Deck for Project presentation
+
+imgs: Images used in Readme and Presentation.
+
+In addition to above team members may have their own branch directory.
+
 ### Data Profiling:
 
 ![MDP.PNG](./imgs/MDP.PNG)
