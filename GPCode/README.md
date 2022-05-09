@@ -71,7 +71,7 @@ NLP Score Comparison and Outcome:
 
 We join the movie comment and stock data using Pandas join on streaming\_release\_date (NFLX) and data of Stock price after normalizing the data using MinMaxScaler and plot the final data frame,
 
-![Join.PNG](./imgsJoin.PNG)
+![Join.PNG](./imgs/Join.PNG)
 
 The graph does show some promise on probable correlation.
 
