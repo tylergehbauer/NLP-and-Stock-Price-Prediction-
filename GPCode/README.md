@@ -1,4 +1,4 @@
-![img0.jpg](../_resources/img0.jpg)
+![img0.jpg](.imgs/img0.jpg)
 
 While the relationship between the sentiment of traders, and sentiment of the digital Twitter population, has been tested to have a relationship to the financial performance of industries, either through share price or financial performance, there has been limited studies of impact of sentiment of Critics review on the stock price of the publishing company.
 
@@ -33,6 +33,18 @@ Other Modules Used:
 - Flair (pip install flair) May require Pytorch to be installed.
 - Gensim (pip install gensim)
 
+### Directory Structure
+
+Code: Final Jupyter Notebooks. The code has been done for two publishing companies, Netflix and Disney. In the Kaggle data set, any row containing the publishing company name has been included.
+
+data: Data Files used for Movie Critic comments.
+
+Presentation: Deck for Project presentation
+
+imgs: Images used in Readme and Presentation.
+
+In addition to above team members may have their own branch directory.
+
 ### Data Profiling:
 
 ![MDP.PNG](./imgs/MDP.PNG)
@@ -59,7 +71,7 @@ NLP Score Comparison and Outcome:
 
 We join the movie comment and stock data using Pandas join on streaming\_release\_date (NFLX) and data of Stock price after normalizing the data using MinMaxScaler and plot the final data frame,
 
-![Join.PNG](./imgsJoin.PNG)
+![Join.PNG](./imgs/Join.PNG)
 
 The graph does show some promise on probable correlation.
 
