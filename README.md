@@ -4,75 +4,146 @@
 # Project Title: NLP-and-Stock-Price-Prediction
 
 ## Using machine learning and NLP to predict trends in stock prices
-![Sentiments](imgs/img0.jpg)\
-![Sentiments](imgs/img6-nlp.jpg)
+![img0.jpg](./imgs/img0.jpg)
 
-## Technical Requirements
+While the relationship between the sentiment of traders, and sentiment of the digital Twitter population, has been tested to have a relationship to the financial performance of industries, either through share price or financial performance, there has been limited studies of impact of sentiment of Critics review on the stock price of the publishing company.
 
-### Software Version Control 
+The purpose of this study is to create a model that is predictive in nature of a publicly traded movie publishing company using sentiment analysis to help determine any directional shift of the share price. Is there a relation between comments made on by movie critic and the sudden change in price seen with the stocks? If so, does the comments have an immediate impact on the stocks, or is there a lag effect where comments made impact the stock a few days later? The project aims to analyze these questions and answer them in an objective manner.
 
-* Repository created on GitHub
-https://github.com/tylergehbauer/NLP-and-Stock-Price-Prediction-.git
+### Methodology:
 
-* Files frequently committed to repository.
-* Committed messages with appropriate level of detail included. 
+We have used Pandas heavily in data profiling, pre-processing and plotting.
 
-![Commit messages](imgs/img1.jpg)
+![img7-real.jpg](./imgs/img7-real.jpg)
 
-* Repository organized, and relevant information and project files included. 
+### Source of Data:
 
-![Repo structure](imgs/img2.jpg)
+Critic Reviews Dataset :[Rotten Tomatoes movies and critic reviews dataset | Kaggle](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset)
 
-### Data Collection and Preparation 
+*Content:*
 
-* Data collected, cleaned, and prepared for the application or analysis.
+In the movies dataset each record represents a movie available on Rotten Tomatoes, with the URL used for the scraping, movie tile, description, genres, duration, director, actors, users' ratings, and critics' ratings.
+In the critics dataset each record represents a critic review published on Rotten Tomatoes, with the URL used for the scraping, critic name, review publication, date, score, and content.
 
- https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset?select=rotten_tomatoes_movies.csv
+Publishing Company Stock Data: ALPACA API ( alpaca\_api.get\_bars )
+
+Python Modules Installed:
+
+![img4.jpg](./imgs/img4.jpg)
+
+Other Modules Used:
+
+- Statsmodels (pip install statsmodels)
+- Textblob ( pip install textblob)
+- Circlify (pip install circlify)
+- Flair (pip install flair) May require Pytorch to be installed.
+- Gensim (pip install gensim)
+
+### Directory Structure
+__________________
+```
+# Code: Final Jupyter Notebooks
+```
+[Disney Stock](./Code/Disney_NLP_Stock.ipynb)
+
+[Netflix Stock](./Code/Netflix_NLP_Stock.ipynb)
+
  
-![Rotten Tomatoes](imgs/img6.jpg) 
+The code has been done for two publishing companies, Netflix and Disney. In the Kaggle data set, any row containing the publishing company name has been included.
+________________
+````
+# /data 
+  Data Files used for Movie Critic comments.
+`````
+[All Data](/data)
+___________________
+```
+# /Presentation:
+   Deck for Project presentation
+```
+[Presentations](/presentation)
+___________________
+```
 
- * https://app.alpaca.markets/brokerage/dashboard/overview
+# /imgs:
+   Images used in Readme and Presentation.
 
- ![Alpaca](imgs/img5.jpg)
+In addition to above team members may have their own branch directory.
 
- ![Data Collection](imgs/img2.jpg)
+```
+[All Images](./imgs)
+______________________
+### Data Profiling:
 
-### Development  
+![MDP.PNG](./imgs/MDP.PNG)
 
-* Jupyter notebook, Notepade, Notepad ++, Visual Studio Code
+**Stock Price Profiling:**
+```
+DIS_DF['Daily Return'] = DIS_DF['close'].pct_change(1)
 
-![Real Python](imgs/img7-real.jpg)
+DIS_DF['Daily Return'].plot(figsize=(20, 20))
 
-### One or more Python modules, machine learning models utilized in this project
+```
 
-![Data Collection](imgs/img4.jpg)
+![SPDP.PNG](./imgs/SPDP.PNG)
 
-### Calculations, metrics, visualizations needed to demonstrate the application included. 
-* [Evidence Folder](Evidence_Folder/readme.md)
+![img6-nlp.jpg](./imgs/img6-nlp.jpg)
 
-### One new technology or library used that the class hasn't covered. 
-* Granger Casuality Test: Combines two data frames for better visualization
-* Granger
+NLP Pipeline profiling:
+```
+#Word clouds for each of the Lemmatizer
 
-![granger causality](imgs/img9-nlp.jpg)
-* Flair
-* CIRCLIFY
-* Text2Blob
+fig = plt.figure(1, figsize=(15, 15))
+for i in range(len(movie_reviews_DIS.columns[movie_reviews_DIS.dtypes==object])):
+    ax = fig.add_subplot( int(len(movie_reviews_DIS.columns[movie_reviews_DIS.dtypes==object])/2),2,i+1)
+    
+    column=movie_reviews_DIS.columns[movie_reviews_DIS.dtypes==object][i]
+    
+    words = ' '.join(movie_reviews_DIS[column])
+    
+    wordcloud = WordCloud(
+                      background_color='white', 
+                      max_words=100,
+                      max_font_size=30,
+                      scale=3,
+                      random_state=1
+                     ).generate(words)
+    ax.title.set_text(movie_reviews_DIS.columns[movie_reviews_DIS.dtypes==object][i])
+    ax.imshow(wordcloud)
+    ax.axis('off')
+    
+```
 
-![granger causality](imgs/img8-gran.jpg)
+![NLP.PNG](./imgs/NLP.PNG)
 
-### Presentation 
 
-[Evidence Folder](Evidence_Folder/presentation.ppt)
+![img9-nlp.jpg](./imgs/img9-nlp.jpg)
 
-[Presentation Files on Google Docs](https://drive.google.com/drive/folders/13l0l8TofbhjEogZGwBqDJohKHhWnSzf5?usp=sharing)
+NLP Score Comparison and Outcome:
+```
+#Check TextBlob Sentiment score too
+#movie_reviews_NFLX['score_txtblob'] = movie_reviews_NFLX['critics_consensus_spacytext'].apply(lambda Text: TextBlob(Text).sentiment)
+movie_reviews_NFLX[['score_txtblob','subj_txtblob']] = movie_reviews_NFLX['critics_consensus_spacytext'].apply(lambda Text: pd.Series(TextBlob(Text).
+```
 
-### Submission Link on Bootcamp Spot
+![NLPScore.PNG](./imgs/NLPScore.PNG)
 
-https://github.com/tylergehbauer/NLP-and-Stock-Price-Prediction-.git
+![NLPOutcome.PNG](./imgs/NLPOutcome.PNG)
 
-In addition to submitting this project on Bootcamp Spot individually, One member filled out the required form. [--Form to be filled out---](https://forms.gle/CBk5tyy4sSsGN8k38) 
+**The Final Test:**
 
-- - -
+We join the movie comment and stock data using Pandas join on streaming\_release\_date (NFLX) and data of Stock price after normalizing the data using MinMaxScaler and plot the final data frame,
 
-© 2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+![Join.PNG](./imgs/Join.PNG)
+
+The graph does show some promise on probable correlation.
+
+**Granger Causality Test:**
+
+![GC.PNG](./imgs/GC.PNG)
+
+### **Conclusion:**
+
+In the above case P-Value is indeed above 0.05 and hence we can assume that the critic comments do not impact stock value.
+
+We should further test with different publishing company and much bigger dataset.
