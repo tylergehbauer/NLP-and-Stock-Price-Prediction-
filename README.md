@@ -48,6 +48,8 @@ __________________
 
 [Netflix Stock](./Code/Netflix_NLP_Stock.ipynb)
 
+[Universal Stock](./Code/Universal_NLP_stock.ipynb)
+
  
 The code has been done for two publishing companies, Netflix and Disney. In the Kaggle data set, any row containing the publishing company name has been included.
 ________________
