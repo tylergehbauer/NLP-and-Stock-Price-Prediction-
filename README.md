@@ -42,7 +42,7 @@ Other Modules Used:
 ### Directory Structure
 __________________
 ```
-# Code: Final Jupyter Notebooks
+# /Code: Final Jupyter Notebooks
 ```
 [Disney Stock](./Code/Disney_NLP_Stock.ipynb)
 
@@ -61,7 +61,7 @@ ___________________
 # /Presentation:
    Deck for Project presentation
 ```
-[Presentations](/presentation)
+[Presentations](/Presentation)
 ___________________
 ```
 
@@ -71,7 +71,7 @@ ___________________
 In addition to above team members may have their own branch directory.
 
 ```
-[All Images](./imgs)
+[All Images](/imgs)
 ______________________
 ### Data Profiling:
 
