@@ -139,6 +139,12 @@ We join the movie comment and stock data using Pandas join on streaming\_release
 The graph does show some promise on probable correlation.
 
 **Granger Causality Test:**
+```
+from statsmodels.tsa.stattools import grangercausalitytests
+#perform Granger-Causality test
+grangercausalitytests(Final_df_txtblob[['Daily Return', 'score_txtblob']], maxlag=[7])
+
+```
 
 ![GC.PNG](./imgs/GC.PNG)
 
