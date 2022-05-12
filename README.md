@@ -117,7 +117,9 @@ for i in range(len(movie_reviews_DIS.columns[movie_reviews_DIS.dtypes==object]))
 ```
 
 ![NLP.PNG](./imgs/NLP.PNG)
-
+## From the above visuals, we can conclude that Spacy is performing best as there are  more bold and pronounced words compared to the rest
+___________________
+**ITS ALL ABOUT CHOICES!!!**
 
 ![img9-nlp.jpg](./imgs/img9-nlp.jpg)
 
